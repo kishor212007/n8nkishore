@@ -1,0 +1,75 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 6,
+              "triggerAtMinute": 5
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        0,
+        0
+      ],
+      "id": "9828d3a2-53a3-42dd-938d-086931fd96e4",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "sendTo": "kishork2606@gmail.com",
+        "subject": "Wake Up",
+        "message": "Wake Up",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        224,
+        0
+      ],
+      "id": "2a06ddbb-6729-48d0-a207-cc4fb8678921",
+      "name": "Send a message",
+      "webhookId": "80357b17-5292-4baa-a604-b57156e7cad9",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "nwd9WOcyb0UKZKsb",
+          "name": "Gmail account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "e26c2e1f-98c9-44f2-b5d0-df120cdb7894",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "72551f0103fbcb46e0bdc2dd79ee0197e9e873dc834300f32f4140b122e83711"
+  },
+  "nodeGroups": [],
+  "id": "ThlO52l6mmQ2eikU",
+  "tags": []
+}
